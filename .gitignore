@@ -1,0 +1,11 @@
+.settings/*.*
+*.class
+bin/*.*
+*.project
+*.classpath
+hs_err*
+source/tests/*.*
+donotinclude/*.*
+/bin
+/binaries
+libraries/bukkit/*.jar

@@ -1,0 +1,2 @@
+I obviously won't include the Bukkit redistributions.
+Put I put 'em here anyway. I just make sure not to include them.
