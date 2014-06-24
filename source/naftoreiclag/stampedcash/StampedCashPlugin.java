@@ -15,14 +15,14 @@ public class StampedCashPlugin extends JavaPlugin
 	public Server server;
 	public Logger logger;
 	public PluginManager pluginManager;
-	
+
 	@Override
-    public void onEnable()
+	public void onEnable()
 	{
 		server = this.getServer();
 		logger = this.getLogger();
 		pluginManager = server.getPluginManager();
-		
-		
-    }
+
+		this.getCommand("stampedcash").setExecutor(new MainCommand());
+	}
 }

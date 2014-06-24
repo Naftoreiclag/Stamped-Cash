@@ -3,28 +3,32 @@ main: naftoreiclag.stampedcash.StampedCashPlugin
 version: 1.1.0
 author: Naftoreiclag
 commands:
-    sc.mint:
+    sc:
+        description: Stamped Cash main command.
+        usage: /<command> <subcommand>
+        aliases: [stampedcash, cash, stamp]
+    sc mint:
         description: Mint out some new money the proper way.
         usage: /<command> <amount> [quantity]
-        aliases: [stampedcash.mint, sc.spawn, stampedcash.spawn, sc.create, stampedcash.create, sc.m, stampedcash.m]
+        aliases: [spawn, create, m]
         permission: stampedcash.mint
-    sc.combine:
+    sc combine:
         description: Combines cash in your inventory into one piece of specified size.
         usage: /<command> [amount]
-        aliases: [stampedcash.combine, sc.condense, stampedcash.condense, sc.merge, stampedcash.merge, sc.c, stampedcash.c]
+        aliases: [condense, merge, c]
         permission: stampedcash.combine
-    sc.split:
+    sc split:
         description: Break off a wad of specified size from the wad held in your hand.
         usage: /<command> [amount]
-        aliases: [stampedcash.split, sc.break, stampedcash.break, sc.change, stampedcash.change, sc.s, stampedcash.s]
+        aliases: [break, change, s]
         permission: stampedcash.split
 permissions:
     stampedcash.*:
         description: Grants power to all things money.
         children:
-            stampedcash.mint
-            stampedcash.combine
-            stampedcash.split
+            stampedcash.mint: true
+            stampedcash.combine: true
+            stampedcash.split: true
     stampedcash.mint:
         description: Allows you to print money.
     stampedcash.combine:
